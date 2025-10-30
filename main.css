@@ -1,0 +1,126 @@
+body {
+  background-color: rgba(36, 38, 39, 0.096);
+}
+div {
+  background-color: rgba(115, 126, 122, 0.541);
+  transition-duration: 0.5s;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+a {
+  margin-top: 1vh;
+  margin: 10px;
+}
+.header {
+  text-align: center;
+  width: 99vw;
+  height: 5vh;
+  background-color: rgba(183, 199, 193, 0.541);
+  margin-bottom: 10px;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 8px;
+}
+.div1 {
+  grid-row: span 6 / span 6;
+  background-color: rgba(115, 126, 122, 0.541);
+  width: 20vw;
+  height: 100vh;
+}
+.div2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  background-color: rgba(115, 126, 122, 0.541);
+  width: 40vw;
+  height: 49.5vh;
+}
+.div3 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 2;
+  grid-row-start: 4;
+  background-color: rgba(115, 126, 122, 0.541);
+}
+.div4 {
+  grid-row: span 3 / span 3;
+  grid-column-start: 4;
+  grid-row-start: 1;
+  background-color: rgba(115, 126, 122, 0.541);
+}
+.div5 {
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+  grid-row-start: 1;
+  background-color: rgba(115, 126, 122, 0.541);
+}
+.div6 {
+  grid-row: span 3 / span 3;
+  grid-column-start: 4;
+  grid-row-start: 4;
+  background-color: rgba(115, 126, 122, 0.541);
+}
+.div7 {
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+  grid-row-start: 4;
+  background-color: rgba(115, 126, 122, 0.541);
+}
+.div8 {
+  grid-row: span 4 / span 4;
+  grid-row-start: 7;
+  width: 20vw;
+  height: 66.67vh;
+}
+.div9 {
+  grid-row: span 4 / span 4;
+  grid-row-start: 7;
+}
+.div10 {
+  grid-column: span 3 / span 3;
+  grid-row: span 4 / span 4;
+  grid-row-start: 7;
+}
+.img1 {
+  width: 30vw;
+  height: 40vh;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+.img2 {
+  width: 30vw;
+  height: 40vh;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+.img3 {
+  width: 15vw;
+  height: 25vh;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+.audio1 {
+  width: 17vw;
+  display: block;
+  margin: auto;
+}
+.parent:has(> *:hover) > *:not(:hover) {
+  transform: scale(0.95);
+  transition-duration: 0.5s;
+}
+.parent > *:hover {
+  transform: scale(1.01);
+  transition-duration: 0.5s;
+}
+.offscreen-content {
+  content-visibility: auto;
+}

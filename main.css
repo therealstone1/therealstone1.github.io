@@ -124,3 +124,11 @@ a {
 .offscreen-content {
   content-visibility: auto;
 }
+#journals{
+  text-decoration: underline;
+  color:black;
+}
+#youtube{
+  text-decoration: underline;
+  color: black;
+}

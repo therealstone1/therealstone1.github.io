@@ -1,0 +1,17 @@
+#dividend{
+    position:relative;
+    top: 5vh;
+    margin: auto;
+    width: 10vw;
+    height: 10vh;
+    background-color: burlywood;
+}
+#shop1{
+    position: relative;
+    width: 15vw;
+    height: 10vh;
+}
+#shop1_2{
+    position: relative;
+    margin: auto;
+}

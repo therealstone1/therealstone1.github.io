@@ -1,0 +1,112 @@
+#hand{
+    width: 30vw;
+    height: 25vh;
+    background-color: aliceblue;
+    display: inline-block;
+}
+#table{
+    background-color: green;
+    width: 30vw;
+    height: 100vh;
+    display: inline-block;
+}
+.dealer{
+    display: inline-block;
+}
+#flop{
+    background-image: url(Ace_of_spades.png);
+    rotate: 90deg;
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10vw;
+}
+#deck{
+    background-image: url(deck.jpg);
+    rotate: 90deg;
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5vw;
+}
+#flop,#deck{
+    display: inline-block;
+}
+#card_1{
+    background-image: url(deck.jpg);
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin:auto;
+}
+#card_2{
+    background-image: url(deck.jpg);
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin:auto;
+}
+#card_3{
+    background-image: url(deck.jpg);
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin:auto;
+}
+#card_4{
+    background-image: url(deck.jpg);
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin:auto;
+}
+#card_5{
+    background-image: url(deck.jpg);
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin:auto;
+}
+#hand_1{
+    background-image: url(Ace_of_spades.png);
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+#hand_2{
+    background-image: url(Ace_of_spades.png);
+    width: 5vw;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block; 
+}
+.but{
+    position:absolute;
+}
+#call{
+    left: 15vw;
+}
+#fold{
+    left: 19vw;
+}
+.money{
+    position: absolute;
+}
+#yourMoney{
+    top: 8vh;
+    left: 11vw;
+}
+#myMoney{
+    top: 10vh;
+    left: 11vw;
+}

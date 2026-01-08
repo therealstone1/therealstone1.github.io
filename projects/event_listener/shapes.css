@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
 }
 .square{
-     background-size:contain;
+    background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
     display: inline-block;

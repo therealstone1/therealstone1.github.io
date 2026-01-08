@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poker simulator</title>
+    <link rel="stylesheet" href="poker.css">
+</head>
+<body>
+    <div id="hand">
+        <div id="hand_1"></div>
+        <div id="hand_2"></div>
+        <button id="raise" class="but">Raise</button>
+        <button id="call" class="but">Call</button>
+        <button id="fold" class="but">Fold</button>
+        <p id="yourMoney" class="money">you are betting <span id="bet">0</span> moneys total </p>
+        <p id="myMoney" class="money">the call is <span id="pot">0</span> moneys</p>
+    </div>
+        <div id="table">
+            <div id="dealer">
+                <div id="deck" class="dealer"></div>
+                <div id="flop" class="dealer"></div>
+            </div>
+            <div id="card_1"></div>
+            <div id="card_2"></div>
+            <div id="card_3"></div>
+            <div id="card_4"></div>
+            <div id="card_5"></div>
+        </div>
+    <script src="poker.js"></script>
+</body>
+</html>

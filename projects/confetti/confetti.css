@@ -1,8 +1,11 @@
 .confetti{
-    width: 10px;
-    height: 10px;
     position:absolute;
 }
 p{
     margin:auto;
+    color: white;
+}
+body{
+    background-color: black;
+    overflow: hidden;
 }

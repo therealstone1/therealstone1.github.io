@@ -1,6 +1,23 @@
 .confetti{
     position:absolute;
+    width: 10px;
+    height: 50px;
+    animation-name: swing;
+    animation-duration: 1.2s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
+@keyframes swing {
+    from{
+        transform: rotate(var(--startRot));
+    }
+    to{
+        transform: rotate(var(--endRot));
+    }
+}
+
+
 p{
     margin:auto;
     color: white;

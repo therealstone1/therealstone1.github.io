@@ -1,29 +1,33 @@
-// let falling = 0
-
+let colors = ["blue","red","green"]
 function makeConfetti(){
-    square = document.createElement("div")
+    let square = document.createElement("div")
     square.classList.add("confetti")
-    let w = Math.floor(Math.random()*10)
-    let h = Math.floor(Math.random()*10)
-    let l = Math.random()*100
-    let t = Math.random()*100
-    let r = Math.floor(Math.random()*255)
-    let g = Math.floor(Math.random()*255)
-    let b = Math.floor(Math.random()*255)
-    square.style.backgroundColor = "rgb("+ r + "," + g + "," + b +")"
-    square.style.left = l + "vw"
-    square.style.top = t + "px"
-    square.style.width = parseInt(w) + "px"
-    square.style.height = parseInt(h) + "px"
     document.body.appendChild(square)
 
+    let r = Math.random() * 255
+    let g = Math.random() * 255
+    let b = Math.random() * 255
+    let rotation = Math.random() * 360
+
+    let startRot = Math.random() * -60 + "deg"
+    let endRot = Math.random() * 60 + "deg"
+
+    square.style.backgroundColor = "rgb("+ r +","+ g +","+ b +")"
+    square.style.left = Math.random() * 1500 + "px"
+    square.style.top = "0px"
+    square.style.transform = "rotate("+ rotation +" deg)"
+
+    square.style.setProperty("--startRot", startRot)
+    square.style.setProperty("--endRot", endRot)
+
     function fall(){
-        falling = 50
-        square.style.top = parseInt(square.style.top) + falling + "px"
-            if (falling >= 500){
-                falling = 0
-            }
+        let fallFactor = 10
+        square.style.top = parseInt(square.style.top) + fallFactor + "px"
+        console.log(square.style.top)
+        if (parseInt(square.style.top) > 1000) {
+            square.style.top = "10px"
+        }
     }
-    setInterval(fall, 400)
+    setInterval(fall, 100)
 }
-setInterval(makeConfetti,20)
+setInterval(makeConfetti,200)

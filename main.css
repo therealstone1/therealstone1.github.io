@@ -16,10 +16,13 @@ a {
   margin: 10px;
 }
 .header {
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
   width: 99vw;
   height: 5vh;
   background-color: rgba(183, 199, 193, 0.541);
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .parent {
@@ -128,6 +131,18 @@ a {
 .linkas{
   text-decoration: underline;
   color: black;
+}
+.iContain{
+  position: absolute;
+  left: 95vw;
+  top: 2vh;
+  width: 3vw;
+  height: 3vh;
+}
+.iContain img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #gato{
   width: 22.5vw;

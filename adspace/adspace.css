@@ -1,0 +1,29 @@
+#header{
+    width: 99vw;
+    height: 5vh;
+    background-color: aquamarine;
+    margin: auto;
+}
+#contain{
+    display: flex;
+    flex-wrap: wrap;
+}
+#back{
+    color: black;
+    text-decoration: underline;
+}
+#notice{
+    position:absolute;
+    right:10vw;
+    top: 2vh;
+}
+.image{
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+}
+.image img{
+    max-width: 100%;
+    max-height: 20vw;
+    display: flex;
+}

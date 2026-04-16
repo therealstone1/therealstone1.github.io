@@ -8,13 +8,8 @@
 </head>
 <body>
     <script>
-        function setup(){
-            cw = 600
-            ch = 600
-            let cnv = createCanvas(cw,ch)
-            cnv.position((windowWidth-width)/2, (windowHeight-height)/2);
-            frameRate(60)
-        }
+        cw = 600
+        ch = 600
         //initial coordinates for player
         x=200
         y=200
@@ -23,54 +18,21 @@
         roomMatrix = [0,0]
         //valueset for the borders of the end of the open world
         roomEnd = [
-            [25,300,50,600,125],
-            [575,300,50,600,125],
-            [300,575,600,50,125],
-            [300,25,600,50,125]
+            [25,300,50,ch,125],
+            [cw-25,300,50,ch,125],
+            [300,ch-25,cw,50,125],
+            [300,25,cw,50,125]
         ]
+        function setup(){
+            let cnv = createCanvas(cw,ch)
+            cnv.position((windowWidth-width)/2, (windowHeight-height)/2);
+            frameRate(60)
+        }
         function draw(){
             background(0)
             // rect test
             rectMode(CENTER)
             strokeWeight(0)
-            // border patrol
-            if (Math.abs(parseInt(roomMatrix[0])) >= n){
-                if (parseInt(roomMatrix[0]) === -1 * n){
-                    rect(roomEnd[0][0],roomEnd[0][1],roomEnd[0][2],roomEnd[0][3])
-                    fill(roomEnd[0][4])
-                }
-                if (parseInt(roomMatrix[0]) === n){
-                    rect(roomEnd[1][0],roomEnd[1][1],roomEnd[1][2],roomEnd[1][3])
-                    fill(roomEnd[1][4])
-                }
-            }
-            if (Math.abs(parseInt(roomMatrix[1])) >=n){
-                if (parseInt(roomMatrix[1]) === n){
-                    rect(roomEnd[2][0],roomEnd[2][1],roomEnd[2][2],roomEnd[2][3])
-                    fill(roomEnd[2][4])
-                }
-                if (parseInt(roomMatrix[1]) === -1 * n){
-                    rect(roomEnd[3][0],roomEnd[3][1],roomEnd[3][2],roomEnd[3][3])
-                    fill(roomEnd[3][4])
-                }
-            }
-            //border patrol collisions
-            if (parseInt(roomMatrix[0]) === n && x > (cw-50) || parseInt(roomMatrix[0]) === -1 * n && x < 50){
-                if (parseInt(roomMatrix[0]) < 0){
-                    x = parseInt(roomEnd[0][0]) + parseInt(roomEnd[0][2])
-                }
-                else{
-                    x = parseInt(roomEnd[1][0]) - parseInt(roomEnd[1][2])
-                }
-            }
-            if (parseInt(roomMatrix[1]) === -1 * n && y < 50 || parseInt(roomMatrix[1]) === n && y > (ch-50)){
-                if (parseInt(roomMatrix[1]) < 0){
-                    y = parseInt(roomEnd[3][1])+parseInt(roomEnd[3][3])
-                }
-                else{
-                    y = parseInt(roomEnd[2][1])-parseInt(roomEnd[2][3])
-                }
-            }
             //movement
             if (keyIsDown(LEFT_ARROW)===true){
                 x-=5
@@ -85,6 +47,44 @@
             }
             if (keyIsDown(DOWN_ARROW)===true){
                 y+=5
+            }
+            // border patrol
+            if (Math.abs(parseInt(roomMatrix[0])) >= n){
+                if (parseInt(roomMatrix[0]) === -1 * n){
+                    fill(roomEnd[0][4])
+                    rect(roomEnd[0][0],roomEnd[0][1],roomEnd[0][2],roomEnd[0][3])
+                }
+                if (parseInt(roomMatrix[0]) === n){
+                    fill(roomEnd[1][4])
+                    rect(roomEnd[1][0],roomEnd[1][1],roomEnd[1][2],roomEnd[1][3])
+                }
+            }
+            if (Math.abs(parseInt(roomMatrix[1])) >=n){
+                if (parseInt(roomMatrix[1]) === n){
+                    fill(roomEnd[2][4])
+                    rect(roomEnd[2][0],roomEnd[2][1],roomEnd[2][2],roomEnd[2][3])
+                }
+                if (parseInt(roomMatrix[1]) === -1 * n){
+                    fill(roomEnd[3][4])
+                    rect(roomEnd[3][0],roomEnd[3][1],roomEnd[3][2],roomEnd[3][3])
+                }
+            }
+            //border patrol collisions
+            if ((parseInt(roomMatrix[0]) === n && x > (cw-50)) || (parseInt(roomMatrix[0]) === -1 * n && x < 50)){
+                if (parseInt(roomMatrix[0]) < 0){
+                    x = parseInt(roomEnd[0][0]) + parseInt(roomEnd[0][2])
+                }
+                else{
+                    x = parseInt(roomEnd[1][0]) - parseInt(roomEnd[1][2])
+                }
+            }
+            if ((parseInt(roomMatrix[1]) === -1 * n && y < 50) || (parseInt(roomMatrix[1]) === n && y > (ch-50))){
+                if (parseInt(roomMatrix[1]) < 0){
+                    y = parseInt(roomEnd[3][1])+parseInt(roomEnd[3][3])
+                }
+                else{
+                    y = parseInt(roomEnd[2][1])-parseInt(roomEnd[2][3])
+                }
             }
             //room switching
             if (y<0 && parseInt(roomMatrix[1]) > -n){
@@ -109,7 +109,7 @@
             }
             //draw square
             fill(255)
-            player = square(x,y,30)
+            square(x,y,30)
         }
     </script>
 </body>

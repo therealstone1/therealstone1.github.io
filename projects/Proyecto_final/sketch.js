@@ -66,7 +66,7 @@ function repaint(){
     output = join(initArray,"")
   }
   else{
-    output = join(initArray,"") + str(dString.value())
+    output = join(initArray,"")
   }
   //clear values for added security
   eString.value("")
@@ -76,13 +76,13 @@ function unpaint(){
   initArray = []
   scrambleArray = []
   //this for loop does functionally the same thing, except it removes the added value from the check
-  for (let i = 0; i < (fString.value().length - dString.value().length); i += 3) {
+  for (let i = 0; i < fString.value().length; i += 3) {
     initArray.push(str(fString.value()[i]) + str(fString.value()[i + 1]) + str(fString.value()[i+2]));
     scrambleArray.push(i/3)
   }
   scrambleArray.reverse()
   //the same thing over again
-  for (var i in initArray,scrambleArray){
+  for (var i in initArray, scrambleArray){
     for (var j in character, numb){
       //check happens again, subtraction ensues 
       if(dString.value() === "" || dString.value() > 99){
